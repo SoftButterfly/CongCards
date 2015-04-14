@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="author" content="Martin Josemaría Vuelta Rojas">
+
+        <title>CongCards</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="/static/media/favicon.ico" />
+
+        <link rel="stylesheet" type="text/css" media="all" href="/static/css/normalize.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="/static/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="/static/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="/static/css/main.css">
+
+        <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo">CongCards</a>
+                    <ul class="side-nav">
+                        <li><a>
+                            <form action="." method="GET" accept-charset="utf-8">
+                                <div class="input-field s-mar-t-0">
+                                    <i class="mdi-action-search prefix"></i>
+                                    <input id="search" name="search" type="text" required>
+                                </div>
+                            </form>
+                        </a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row s-mar-t-20">
+                    <div class="col s12">
+                        <div class="card">
+                            <div class="card-content">
+                                <h4><span class="card-title black-text">{{CONGRESMAN.NOMBRE}} {{CONGRESMAN.APELLIDOS}}</span></h4>
+                                <div class="divider col s12"></div>
+                                <div class="row">
+                                    <div class="col s4">
+                                        <div class="card">
+                                            <div class="card-image">
+                                                <img src="/static/media/congresistas.jpg"><!--{{CONGRESMAN.NOMBRE.split|join:"_"}}__{{CONGRESMAN.APELLIDOS.split|join:"_"}}.jpg"-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s8">
+                                        <table>
+                                            <tbody>
+                                                <tr><td><strong>Región</strong></td><td>:</td><td>{{CONGRESMAN.REGION}}</td></tr>
+                                                {% if CONGRESMAN.PAGINA_WEB %}
+                                                <tr><td><strong>Página web institucional</strong></td><td>:</td><td><a href="{{CONGRESMAN.PAGINA_WEB}}">Enlace externo <i class="fa fa-external-link"></i></a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.PAGINA_WEB2 %}
+                                                <tr><td><strong>Página personal</strong></td><td>:</td><td><br><a href="{{CONGRESMAN.PAGINA_WEB2}}">Enlace externo <i class="fa fa-external-link"></i></a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.EMAIL_1 %}
+                                                <tr><td><strong>Email</strong></td><td>:</td><td>{{CONGRESMAN.EMAIL_1}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.EMAIL_2 %}
+                                                <tr><td><strong>Email</strong></td><td>:</td><td>{{CONGRESMAN.EMAIL_2}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.EMAIL_3 %}
+                                                <tr><td><strong>Email</strong></td><td>:</td><td>{{CONGRESMAN.EMAIL_3}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.DIRECCION_LIMA %}
+                                                <tr><td><strong>Direccion en Lima</strong></td><td>:</td><td>{{CONGRESMAN.DIRECCION_LIMA}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.DISTRITO_LIMA %}
+                                                <tr><td></td><td></td><td>{{CONGRESMAN.DISTRITO_LIMA}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.DIRECCION_REGION %}
+                                                <tr><td><strong>Direccion en {{CONGRESMAN.REGION}}</strong></td><td>:</td><td>{{CONGRESMAN.DIRECCION_REGION}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.DISTRITO_REGION %}
+                                                <tr><td><strong>Distrito</strong></td><td>:</td><td>{{CONGRESMAN.DISTRITO_REGION}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.PROVINCIA_REGION %}
+                                                <tr><td><strong>Provincia</strong></td><td>:</td><td>{{CONGRESMAN.PROVINCIA_REGION}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.TELEFONO_LIMA_1 %}
+                                                <tr><td><strong>Télefono 1 (Lima)</strong></td><td>:</td><td>{{CONGRESMAN.TELEFONO_LIMA_1}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.TELEFONO_LIMA_2 %}
+                                                <tr><td><strong>Telefono 2 (Lima)</strong></td><td>:</td><td>{{CONGRESMAN.TELEFONO_LIMA_2}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.TELEFONO_CELULAR %}
+                                                <tr><td><strong>Telefono celular</strong></td><td>:</td><td>{{CONGRESMAN.TELEFONO_CELULAR}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.TELEFONO_REGION_1 %}
+                                                <tr><td><strong>Telefono 1 ({{CONGRESMAN.REGION}})</strong></td><td>:</td><td>{{CONGRESMAN.TELEFONO_REGION_1}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.TELEFONO_REGION_2 %}
+                                                <tr><td><strong>Telefono 2 ({{CONGRESMAN.REGION}})</strong></td><td>:</td><td>{{CONGRESMAN.TELEFONO_REGION_2}}</td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.TELEFONO_REGION_3 %}
+                                                <tr><td><strong>Telefono 2 ({{CONGRESMAN.REGION}})</strong></td><td>:</td><td>{{CONGRESMAN.TELEFONO_REGION_3}}</td></tr>
+                                                {% endif %}
+                                                <tr><td><strong>Redes Sociales</strong></td><td>:</td><td></td></tr>
+                                                {% if CONGRESMAN.TWITTER %}
+                                                <tr><td><strong></strong></td><td></td><td style="color: cyan"><a href="{{CONGRESMAN.TWITTER}}"><i class="fa fa-twitter"></i> Twitter</a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.FACEBOOK %}
+                                                <tr><td><strong></strong></td><td></td><td style="color: blue"><a href="{{CONGRESMAN.FACEBOOK}}"><i class="fa fa-facebook"></i> facebook</a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.GOOGLEP %}
+                                                <tr><td><strong></strong></td><td></td><td style="color: red"><a href="{{CONGRESMAN.GOOGLEP}}"><i class="fa fa-google-plus"></i> Google+</a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.YOUTUBE %}
+                                                <tr><td><strong></strong></td><td></td><td style="color: red"><a href="{{CONGRESMAN.YOUTUBE}}"><i class="fa fa-youtube"></i> YouTube</a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.BLOG %}
+                                                <tr><td><strong></strong></td><td></td><td><a href="{{CONGRESMAN.FLICKR}}"><i class="fa fa-blogger"></i> Blog</a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.FLICKR %}
+                                                <tr><td><strong></strong></td><td></td><td><a href="{{CONGRESMAN.FLICKR}}"><i class="fa fa-flickr"></i> Flickr</a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.ISSUU %}
+                                                <tr><td><strong></strong></td><td></td><td><a href="{{CONGRESMAN.ISSUU}}">Issuu</a></td></tr>
+                                                {% endif %}
+                                                {% if CONGRESMAN.IBLUPS %}
+                                                <tr><td><strong></strong></td><td></td><td><a href="{{CONGRESMAN.IBLUPS}}">IBLUPS</a></td></tr>
+                                                {% endif %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col s12 s-mar-t-10">
+                                        <h5 class="s-mar-t-10">Proyectos de Ley <a href="{{CONGRESMAN.PROYECTO_LEY}}"><i class="fa fa-external-link"></i></a></h5>
+                                    </div>
+                                    <div class="divider col s12"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s8">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+        </footer>
+
+
+        <script src="/static/js/jquery-1.11.2.min.js"></script>
+        <script src="/static/js/materialize.min.js"></script>
+        <script src="/static/js/plugins.js"></script>
+        <script src="/static/js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

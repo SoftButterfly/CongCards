@@ -1,0 +1,179 @@
+/* Clases auxiliares para márgenes*/
+    /* Márgenes superiores */
+        .s-mar-t-0{
+            margin-top: 0px!important;
+        }
+
+        .s-mar-t-5{
+            margin-top: 5px!important;
+        }
+
+        .s-mar-t-10{
+            margin-top: 10px!important;
+        }
+
+        .s-mar-t-15{
+            margin-top: 15px!important;
+        }
+
+        .s-mar-t-20{
+            margin-top: 20px!important;
+        }
+
+        .s-mar-t-25{
+            margin-top: 25px!important;
+        }
+
+        @media only screen and (min-width : 601px) {
+            .m-mar-t-0{
+                margin-top: 0px!important;
+            }
+
+            .m-mar-t-5{
+                margin-top: 5px!important;
+            }
+
+            .m-mar-t-10{
+                margin-top: 10px!important;
+            }
+
+            .m-mar-t-15{
+                margin-top: 15px!important;
+            }
+
+            .m-mar-t-20{
+                margin-top: 20px!important;
+            }
+
+            .m-mar-t-25{
+                margin-top: 25px!important;
+            }
+        }
+
+        @media only screen and (min-width : 993px) {
+            .l-mar-t-0{
+                margin-top: 0px!important;
+            }
+
+            .l-mar-t-5{
+                margin-top: 5px!important;
+            }
+
+            .l-mar-t-10{
+                margin-top: 10px!important;
+            }
+
+            .l-mar-t-15{
+                margin-top: 15px!important;
+            }
+
+            .l-mar-t-20{
+                margin-top: 20px!important;
+            }
+
+            .l-mar-t-25{
+                margin-top: 25px!important;
+            }
+        }
+
+    /* Márgenes inferiores */
+        .s-mar-b-0{
+            margin-bottom: 0px!important;
+        }
+
+        .s-mar-b-5{
+            margin-bottom: 5px!important;
+        }
+
+        .s-mar-b-10{
+            margin-bottom: 10px!important;
+        }
+
+        .s-mar-b-15{
+            margin-bottom: 15px!important;
+        }
+
+        .s-mar-b-20{
+            margin-bottom: 20px!important;
+        }
+
+        .s-mar-b-25{
+            margin-bottom: 25px!important;
+        }
+
+        @media only screen and (min-width : 601px) {
+            .m-mar-b-0{
+                margin-bottom: 0px!important;
+            }
+
+            .m-mar-b-5{
+                margin-bottom: 5px!important;
+            }
+
+            .m-mar-b-10{
+                margin-bottom: 10px!important;
+            }
+
+            .m-mar-b-15{
+                margin-bottom: 15px!important;
+            }
+
+            .m-mar-b-20{
+                margin-bottom: 20px!important;
+            }
+
+            .m-mar-b-25{
+                margin-bottom: 25px!important;
+            }
+        }
+
+        @media only screen and (min-width : 993px) {
+            .l-mar-b-0{
+                margin-bottom: 0px!important;
+            }
+
+            .l-mar-b-5{
+                margin-bottom: 5px!important;
+            }
+
+            .l-mar-b-10{
+                margin-bottom: 10px!important;
+            }
+
+            .l-mar-b-15{
+                margin-bottom: 15px!important;
+            }
+
+            .l-mar-b-20{
+                margin-bottom: 20px!important;
+            }
+
+            .l-mar-b-25{
+                margin-bottom: 25px!important;
+            }
+        }
+
+/* Estilos específicos */
+    nav{
+        height: 128px;
+        padding-top: 32px;
+        background-color: black;
+    }
+
+    nav .nav-wrapper{
+        padding-left: 2.0rem;
+        padding-right: 2.0rem;
+    }
+
+    nav .input-field input{
+        padding-left: 0rem;
+    }
+
+    img{
+        background-color: black;
+    }
+
+    td{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
