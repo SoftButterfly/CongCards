@@ -24,7 +24,9 @@ class Congresman(models.Model):
     )
 
     RETRATO = models.ImageField(
-        upload_to='Retratos/'
+        upload_to='Retratos/',
+        blank=True,
+        null=True
     )
 
     CARGO = models.CharField(
