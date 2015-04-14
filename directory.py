@@ -75,7 +75,7 @@ for line in fileHandler:
     CongresmanDict['ISSUU'] = tokens[28]
     CongresmanDict['IBLUPS'] = tokens[29]
     CongresmanDict['OTROS'] = tokens[30]
-    CongresmanDict['PROYECTO_LEY'] = tokens[31]
+    CongresmanDict['PROYECTO_LEY'] = tokens[31].replace(' ', '%20')
     c = Congresman(**CongresmanDict)
     print(c.__str__())
     c.save()
