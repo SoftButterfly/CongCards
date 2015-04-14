@@ -313,7 +313,7 @@ class Congresman(models.Model):
 
         db_table = TABLES['Congresman']
 
-        ordering = ('-NOMBRE',)
+        ordering = ('NOMBRE','APELLIDOS')
 
     def __str__(self):
         return '{0} {1}, {2} por la región {3}'.format(
