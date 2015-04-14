@@ -115,11 +115,13 @@ class Congresman(models.Model):
     UNION_POR_EL_PERU = 'Unión por el Perú'
     VAMOS_PERU = 'Vamos Perú'
     VIDA_Y_LIBERTAD = 'Vida y Libertad'
+    DIGNIDAD_Y_DEMOCRACIA = 'Dignidad y Democracia'
 
     BANCADAS = (
         (ACCION_POPULAR, 'Acción Popular'),
         (ALIANZA_PARA_EL_PROGRESO, 'Alianza para el Progreso'),
         (DEMOCRACIA_DIRECTA, 'Democracia Directa'),
+        (DIGNIDAD_Y_DEMOCRACIA, 'Dignidad y Democracia'),
         (EL_FRENTE_AMPLIO_POR_JUSTICIA, 'El Frente Amplio por Justicia'),
         (FUERZA_POPULAR, 'Fuerza Popular'),
         (PARTIDO_APRISTA_PERUANO, 'Partido Aprista Peruano'),
