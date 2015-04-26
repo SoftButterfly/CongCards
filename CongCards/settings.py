@@ -2,6 +2,17 @@
 import dj_database_url
 import os
 
+
+""" * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+Variables de entorno
+"""
+os.environ.update({
+    'RECAPTCHA_PRIVATE_KEY': '6LcGMgUTAAAAANjaoZ1mpCYXHkp9ySyzxfMQ0uMV',
+    'SECRET_KEY': ')!)x7dpwulvdn6+fx81ckr!*57@2n^2x$8#iq$%4+my=0)k(rx',
+    'DB_KEY': 'c4rd5',
+    'LOCAL': 'True',
+})
+
 """ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 Árbol de Directorios
 """
